@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
   "name": "Ig Optimizer",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Following-only feed, author groups (Publics / Friends) with Hide publics, hide posts without downloading images, exact dates, play videos once.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArB5m+5PujEWqVF/YIBLdTzStxdhKMpxcfb6D8a36TpS0NYa5JomwSU2/2iNNMVz9gCjAOY3sy3EbLTdE/QfBOIb1z2Hb0g9hfKnlZzIYBzdU/M1WRTKohF6gjlOeNPfVss12ukFTxr4WOpvjsu64pv4wK2ffEqEd/vRrjJ+BWPjFQPSAbjwPwp++X46v3+FYz/NH/lGFMpMMkJoRXK0TmUzVnZBGoCuBonjwFjUCKOEd+JvUpLSIKXfBks2mR5CN5pWF/dpvzbu4ezDvG+szcwPxmaZ+RfChYt+Ip6MJixhghoURMY9dG+E2UZb7bUidzd2P+URzyOzD1aIxSMMfjQIDAQAB",
   "permissions": [
     "storage",
     "declarativeNetRequest"
