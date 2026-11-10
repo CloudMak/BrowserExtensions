@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  body { font: 14px system-ui, sans-serif; margin: 0; padding: 16px; width: 260px; }
+  h1 { font-size: 16px; margin: 0 0 12px; }
+  label { display: flex; align-items: center; justify-content: space-between; cursor: pointer; margin-bottom: 10px; }
+  label:last-of-type { margin-bottom: 0; }
+  .sw { position: relative; width: 40px; height: 22px; flex: none; }
+  .sw input { display: none; }
+  .sl { position: absolute; inset: 0; background: #ccc; border-radius: 22px; transition: .2s; }
+  .sl::before { content: ""; position: absolute; width: 18px; height: 18px; left: 2px; top: 2px; background: #fff; border-radius: 50%; transition: .2s; }
+  input:checked + .sl { background: #e1306c; }
+  input:checked + .sl::before { transform: translateX(18px); }
+</style>
+</head>
+<body>
+  <h1>Ig Optimizer</h1>
+  <label>Following only <span class="sw"><input type="checkbox" data-k="onlyFollowing"><span class="sl"></span></span></label>
+  <label>Exact dates <span class="sw"><input type="checkbox" data-k="dates"><span class="sl"></span></span></label>
+  <label>Play videos once <span class="sw"><input type="checkbox" data-k="noLoop"><span class="sl"></span></span></label>
+  <label>Hide publics <span class="sw"><input type="checkbox" data-k="hidePublics"><span class="sl"></span></span></label>
+  <label>Show hidden posts (collapsed) <span class="sw"><input type="checkbox" data-k="showHidden"><span class="sl"></span></span></label>
+  <script src="popup.js"></script>
+</body>
+</html>

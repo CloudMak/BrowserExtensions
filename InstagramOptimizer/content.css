@@ -1,0 +1,44 @@
+/* Suggested / sponsored posts */
+html.igo-on [data-igo-hidden] { display: none !important; }
+
+/* Posts by authors in the Publics group */
+html.igo-hide-publics [data-igo-public] { display: none !important; }
+
+/* Hidden posts: removed entirely, or collapsed to the bar */
+html:not(.igo-show-hidden) [data-igo-user-hidden] { display: none !important; }
+[data-igo-user-hidden]:not([data-igo-expanded]) > :not(.igo-bar) { display: none !important; }
+
+/* Remove blank space Instagram reserves for hidden (0 px) posts */
+[data-igo-feed] { padding-bottom: 0 !important; }
+
+/* Exact dates */
+html.igo-dates time[data-igo-date] { font-size: 0 !important; }
+html.igo-dates time[data-igo-date]::after { content: attr(data-igo-date); font-size: 12px; }
+html:not(.igo-dates) .igo-date { display: none; }
+
+/* Post bar */
+.igo-bar {
+  display: flex; align-items: center; gap: 8px; padding: 4px 0;
+  font: 12px system-ui, sans-serif; color: #8e8e8e;
+}
+[data-igo-user-hidden] > .igo-bar {
+  padding: 8px 12px; margin-bottom: 8px; border: 1px dashed #8e8e8e55; border-radius: 8px;
+}
+.igo-label { font-weight: 600; }
+.igo-actions { margin-left: auto; display: flex; gap: 6px; }
+.igo-btn {
+  background: none; border: 1px solid currentColor; border-radius: 6px;
+  color: inherit; font: inherit; padding: 2px 8px; cursor: pointer;
+}
+.igo-btn:hover { color: #0095f6; }
+
+/* Group dropdown */
+.igo-group {
+  font: 12px system-ui, sans-serif; color: #8e8e8e; background: transparent;
+  border: 1px solid #8e8e8e66; border-radius: 6px; padding: 2px 4px; cursor: pointer;
+  flex: none; align-self: center; margin: 0 8px; max-width: 100px;
+}
+.igo-bar .igo-group { margin: 0; }
+.igo-group[data-group="publics"] { border-color: #f59e0b; color: #f59e0b; }
+.igo-group[data-group="friends"] { border-color: #10b981; color: #10b981; }
+.igo-group option { color: #000; }
