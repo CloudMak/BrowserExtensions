@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Telegram AI Messages — Settings</title>
+  <style>
+    body { font: 14px system-ui, sans-serif; max-width: 720px; margin: 30px auto; padding: 0 16px; }
+    label { display: block; font-weight: 600; margin: 14px 0 4px; }
+    small { color: #777; font-weight: 400; }
+    input, select, textarea { width: 100%; box-sizing: border-box; padding: 8px; font: inherit; border: 1px solid #ccc; border-radius: 8px; }
+    textarea { min-height: 64px; resize: vertical; }
+    .row { display: flex; gap: 12px; } .row > div { flex: 1; }
+    button { margin-top: 18px; padding: 9px 18px; border: none; border-radius: 8px; background: #3390ec; color: #fff; font: inherit; cursor: pointer; }
+    #status { margin-left: 10px; color: #2e7d32; }
+  </style>
+</head>
+<body>
+  <h2>Telegram AI Messages</h2>
+
+  <label>OpenAI API key</label>
+  <input id="apiKey" type="password" placeholder="sk-...">
+
+  <div class="row">
+    <div style="flex:2"><label>Model <small id="modelsInfo"></small></label>
+      <div style="display:flex;gap:6px">
+        <select id="model"></select>
+        <button id="refreshModels" type="button" title="Load models available for your API key" style="margin:0;padding:6px 10px">↻</button>
+      </div>
+    </div>
+    <div><label>Language</label>
+      <select id="language">
+        <option value="auto">Auto (match chat)</option>
+        <option>Russian</option><option>English</option><option>Vietnamese</option>
+      </select>
+    </div>
+    <div><label>Variants</label><input id="variants" type="number" min="1" max="5"></div>
+    <div><label>Context msgs</label><input id="contextMessages" type="number" min="0" max="50"></div>
+  </div>
+
+  <label>About me / my style</label>
+  <textarea id="persona"></textarea>
+
+  <label>🎭 Characters <small>(one per line — shown in the style picker)</small></label>
+  <textarea id="characters" style="min-height:140px"></textarea>
+
+  <label>👋 Hello prompt</label><textarea id="p_hello"></textarea>
+  <label>❓ Ask prompt</label><textarea id="p_ask"></textarea>
+  <label>📩 Invite prompt</label><textarea id="p_invite"></textarea>
+  <label>✏️ Improve prompt</label><textarea id="p_improve"></textarea>
+
+  <button id="save">Save</button><span id="status"></span>
+
+  <script src="defaults.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

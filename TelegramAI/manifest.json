@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Telegram AI Messages",
+  "version": "1.1.0",
+  "description": "Generate hello / ask / invite messages and improve your draft in Telegram Web with OpenAI.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://api.openai.com/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://web.telegram.org/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": { "page": "options.html", "open_in_tab": true },
+  "action": { "default_title": "Telegram AI Messages — settings" }
+}

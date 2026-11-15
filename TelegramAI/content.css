@@ -1,0 +1,40 @@
+/* Push the message list up so the AI bar never covers messages */
+.MessageList .messages-container { padding-bottom: var(--tgai-pad, 72px) !important; }
+
+.tgai-bar {
+  position: fixed; z-index: 9999; display: none; flex-wrap: wrap; align-items: center; gap: 6px;
+  padding: 0 4px; box-sizing: border-box; font-size: 13px;
+}
+.tgai-chip {
+  flex-shrink: 0; border: none; border-radius: 16px; padding: 6px 11px; cursor: pointer; font-size: 13px;
+  background: var(--color-background, #fff); color: var(--color-text, #000);
+  box-shadow: 0 1px 3px rgba(0,0,0,.18); font-family: inherit;
+}
+.tgai-chip:hover { filter: brightness(.95); }
+.tgai-chip.tgai-active { background: var(--color-primary, #3390ec); color: #fff; }
+.tgai-icon { padding: 6px 8px; }
+.tgai-style { max-width: 150px; outline: none; appearance: auto; }
+.tgai-extra {
+  flex: 1; min-width: 120px; padding: 6px 11px; border-radius: 16px; font-size: 13px; border: none; outline: none;
+  background: var(--color-background, #fff); color: var(--color-text, #000); box-shadow: 0 1px 3px rgba(0,0,0,.18);
+}
+
+.tgai-results {
+  position: fixed; z-index: 9999; display: none; flex-direction: column; gap: 6px;
+  max-height: 50vh; overflow: auto; padding: 10px; padding-top: 28px; box-sizing: border-box;
+  background: var(--color-background, #fff); color: var(--color-text, #000);
+  border-radius: 14px; box-shadow: 0 6px 24px rgba(0,0,0,.25); font-size: 14px;
+}
+.tgai-results.tgai-open { display: flex; }
+.tgai-close {
+  position: absolute; top: 6px; right: 8px; border: none; background: none; cursor: pointer;
+  color: inherit; font-size: 14px; opacity: .6;
+}
+.tgai-variant {
+  padding: 8px 10px; border-radius: 10px; cursor: pointer; line-height: 1.35;
+  background: var(--color-background-secondary, #f1f1f1);
+}
+.tgai-variant:hover { outline: 2px solid var(--color-primary, #3390ec); }
+.tgai-again { align-self: flex-start; box-shadow: none; border: 1px solid var(--color-borders, #ddd); }
+.tgai-loading { opacity: .7; }
+.tgai-error { color: #e53935; }

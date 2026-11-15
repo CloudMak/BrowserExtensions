@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.0
+- Popup: **Export data** (JSON backup of hidden posts, image names, groups, stats, settings) and **Import data** (replaces current data).
+- Feed loading indicator: progress, posts loaded, and an estimate of how many more posts are needed, based on the share of visible posts in past loads (`loadStats`).
+
 ## 1.5.1
 - Project restructure: extension code moved to `extension/`, docs stay in the root.
 - Fixed extension ID via `key` in the manifest (`ckfohpnjgmkddabiaaheleebdjjbmohn`).

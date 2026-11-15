@@ -305,6 +305,7 @@ function processVideos() {
 // (our hidden ones). That padding is removed via CSS on [data-igo-feed]. While fewer than
 // two visible posts are left below the screen, synthetic scroll events keep the feed loading.
 const AUTO_LIMIT = 60; // max posts auto-loaded without a new visible one, until the user scrolls
+const NEED_AHEAD = 2;  // visible posts we want below the screen
 let autoBase = null;
 
 function markFeed() {
@@ -315,19 +316,87 @@ function markFeed() {
   }
 }
 
+// ---- Feed stats: share of loaded posts that stay visible (persisted, recent-weighted) ----
+let loadStats = { loaded: 0, visible: 0 };
+const seen = new Set();        // post codes classified in this page
+const firstSeen = new Map();   // code -> time first seen (classified ~1 s later, once filters ran)
+let statsDirty = 0;
+
+const isFiltered = (a) =>
+  a.hasAttribute('data-igo-user-hidden') || a.hasAttribute('data-igo-hidden') ||
+  (opts.hidePublics && a.hasAttribute('data-igo-public'));
+
+function classifyPosts(arts) {
+  const now = Date.now();
+  for (const a of arts) {
+    const code = a.querySelector(':scope > .igo-bar')?.dataset.state?.split('|')[0];
+    if (!code || seen.has(code)) continue;
+    if (!firstSeen.has(code)) { firstSeen.set(code, now); continue; }
+    if (now - firstSeen.get(code) < 1000) continue;
+    seen.add(code);
+    firstSeen.delete(code);
+    loadStats.loaded++;
+    if (!isFiltered(a)) loadStats.visible++;
+    if (loadStats.loaded > 600) { loadStats.loaded /= 2; loadStats.visible /= 2; } // decay
+    statsDirty++;
+  }
+  if (statsDirty >= 5) { statsDirty = 0; chrome.storage.local.set({ loadStats }); }
+}
+
+// ---- Progress indicator ----
+let episode = null; // { startSeen, need } while auto-loading for visible posts
+let progressEl = null;
+
+function showProgress(text, sub, pct) {
+  if (!progressEl) {
+    progressEl = document.createElement('div');
+    progressEl.className = 'igo-progress';
+    progressEl.innerHTML = '<div class="igo-p-main"></div><div class="igo-p-sub"></div><div class="igo-p-bar"><i></i></div>';
+  }
+  if (!progressEl.isConnected) document.body.append(progressEl);
+  progressEl.querySelector('.igo-p-main').textContent = text;
+  progressEl.querySelector('.igo-p-sub').textContent = sub;
+  progressEl.querySelector('i').style.width = `${Math.round(pct * 100)}%`;
+  progressEl.hidden = false;
+}
+
+function hideProgress() {
+  if (progressEl) progressEl.hidden = true;
+}
+
 function autoLoad() {
-  if (!isHome()) return;
+  if (!isHome()) { episode = null; return hideProgress(); }
   const arts = document.querySelectorAll('main article');
-  if (!arts.length) return;
+  if (!arts.length) return hideProgress();
   markFeed();
+  classifyPosts(arts);
   let ahead = 0;
   for (const a of arts) {
     if (a.offsetHeight > 0 && !a.hasAttribute('data-igo-user-hidden') &&
         a.getBoundingClientRect().bottom > innerHeight) ahead++;
   }
-  if (ahead >= 2) { autoBase = null; return; }
+  if (ahead >= NEED_AHEAD) { autoBase = null; episode = null; return hideProgress(); }
+
+  if (!episode) episode = { startSeen: seen.size, need: NEED_AHEAD - ahead };
+  const loaded = seen.size - episode.startSeen;
+  const rate = (loadStats.visible + 1) / (loadStats.loaded + 2); // smoothed visible share
+  const estTotal = Math.ceil(episode.need / rate);
+  const remaining = Math.max(0, estTotal - loaded);
+  const pct = estTotal ? Math.min(0.97, loaded / Math.max(estTotal, loaded + 1)) : 0;
+  const ratePct = Math.max(1, Math.round(rate * 100));
+
   if (autoBase === null) autoBase = arts.length;
-  if (arts.length - autoBase > AUTO_LIMIT) return;
+  if (arts.length - autoBase > AUTO_LIMIT) {
+    showProgress(`Paused after ${loaded} posts without new visible ones`,
+      'Scroll down to continue loading', pct);
+    return;
+  }
+  showProgress(
+    `Loading feed… ${loaded} posts loaded, ${NEED_AHEAD - ahead} visible needed`,
+    remaining
+      ? `Estimate: ~${remaining} more posts (≈${ratePct}% of your feed is visible)`
+      : `Almost there (≈${ratePct}% of your feed is visible)`,
+    pct);
   window.dispatchEvent(new Event('scroll'));
 }
 setInterval(autoLoad, 800);
@@ -404,8 +473,9 @@ new MutationObserver(() => {
 
 chrome.storage.sync.get(opts, (r) => {
   Object.assign(opts, r);
-  chrome.storage.local.get({ hidden: [], hiddenMedia: {}, userGroups: {} }, (l) => {
+  chrome.storage.local.get({ hidden: [], hiddenMedia: {}, userGroups: {}, loadStats }, (l) => {
     hidden = new Set(l.hidden);
+    loadStats = l.loadStats;
     userGroups = l.userGroups;
     hiddenMedia = l.hiddenMedia;
     apply();

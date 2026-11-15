@@ -34,6 +34,7 @@ Owner works in Russian; **all UI text, code comments and docs are in English**.
 | local | `hidden` | `string[]` post shortcodes |
 | local | `hiddenMedia` | `{ [shortcode]: string[] }` image file names |
 | local | `userGroups` | `{ [username]: 'publics' \| 'friends' }` |
+| local | `loadStats` | `{ loaded, visible }` posts seen in the feed (halved above 600) — drives the load estimate |
 | session | `unblocked` | `string[]` shortcodes expanded this session |
 
 ### DOM attributes
@@ -46,6 +47,10 @@ Owner works in Russian; **all UI text, code comments and docs are in English**.
 | `data-igo-public` | Post by a Publics author, home feed only |
 | `data-igo-feed` | Feed list container (its padding-bottom is forced to 0) |
 | `data-igo-date` | Formatted date shown via `::after` on `<time>` |
+
+Own elements: `.igo-bar` (post bar), `.igo-group` (group select), `.igo-progress` (fixed feed loading indicator).
+
+Backup format (popup Export/Import): `{ app, version, exportedAt, settings, local }`; import also accepts `{ l, s }` console dumps.
 
 ## Instagram facts (verified on the live site, Nov 2026)
 

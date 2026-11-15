@@ -42,3 +42,16 @@ html:not(.igo-dates) .igo-date { display: none; }
 .igo-group[data-group="publics"] { border-color: #f59e0b; color: #f59e0b; }
 .igo-group[data-group="friends"] { border-color: #10b981; color: #10b981; }
 .igo-group option { color: #000; }
+
+/* Feed loading indicator */
+.igo-progress {
+  position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 9999;
+  min-width: 300px; max-width: 90vw; padding: 10px 14px; border-radius: 12px;
+  background: rgba(38, 38, 38, .94); color: #fff; font: 12px/1.4 system-ui, sans-serif;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .25); pointer-events: none;
+}
+.igo-progress[hidden] { display: none; }
+.igo-p-main { font-weight: 600; }
+.igo-p-sub { color: #c7c7c7; }
+.igo-p-bar { height: 3px; margin-top: 8px; border-radius: 2px; background: #ffffff33; overflow: hidden; }
+.igo-p-bar i { display: block; height: 100%; width: 0; background: #0095f6; transition: width .4s; }

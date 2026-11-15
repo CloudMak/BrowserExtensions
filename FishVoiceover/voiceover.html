@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Kdenlive Voiceover</title>
+  <link rel="stylesheet" href="voiceover.css" />
+</head>
+<body>
+  <header>
+    <h1>Kdenlive → fish.audio voiceover</h1>
+    <button id="settings" class="ghost">Settings</button>
+  </header>
+
+  <div id="warn" class="warn" hidden></div>
+
+  <label class="block">
+    <span>Paste the clip (select it on the timeline, <b>Ctrl+C</b>) or text from the Speech Editor</span>
+    <textarea id="src" rows="6" spellcheck="false" placeholder="&lt;kdenlive-scene ...&gt;   or   00:00:11:15 Даша, мы сейчас учимся..."></textarea>
+  </label>
+
+  <div class="row">
+    <label>Voice ID <span id="voiceName" class="muted"></span><input id="voice" placeholder="fish.audio model ID" /></label>
+    <label>Model
+      <select id="model">
+        <option value="s2.1-pro">S2.1 Pro</option>
+        <option value="s2.1-pro-free">S2.1 Pro (free)</option>
+        <option value="s2-pro">S2 Pro</option>
+        <option value="drama-3">Drama 3</option>
+        <option value="s1">S1</option>
+      </select>
+    </label>
+    <label>Base speed<input id="speed" type="number" min="0.5" max="2" step="0.05" /></label>
+    <label>FPS (text input)<input id="fps" type="number" min="1" max="120" step="1" /></label>
+  </div>
+
+  <div id="info" class="muted"></div>
+
+  <table id="segments" hidden>
+    <thead>
+      <tr><th>#</th><th>Start</th><th>Fits in</th><th>Text (editable)</th><th>Result</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <footer>
+    <span id="outLabel" class="muted"></span>
+    <span>
+      <button id="copy" class="ghost" disabled>Copy text</button>
+      <button id="gen" disabled>Generate</button>
+    </span>
+  </footer>
+
+  <div id="done" hidden>
+    <audio id="preview" controls></audio>
+    <div id="savedTo"></div>
+  </div>
+
+  <script type="module" src="voiceover.js"></script>
+</body>
+</html>

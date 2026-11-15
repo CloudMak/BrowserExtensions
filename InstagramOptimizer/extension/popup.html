@@ -13,6 +13,10 @@
   .sl::before { content: ""; position: absolute; width: 18px; height: 18px; left: 2px; top: 2px; background: #fff; border-radius: 50%; transition: .2s; }
   input:checked + .sl { background: #e1306c; }
   input:checked + .sl::before { transform: translateX(18px); }
+  .row { display: flex; gap: 8px; margin-top: 14px; }
+  .row button { flex: 1; padding: 6px; border: 1px solid #ccc; border-radius: 6px; background: #fafafa; cursor: pointer; font: inherit; }
+  .row button:hover { background: #f0f0f0; }
+  #msg { margin-top: 8px; font-size: 12px; color: #666; min-height: 1em; }
 </style>
 </head>
 <body>
@@ -22,6 +26,12 @@
   <label>Play videos once <span class="sw"><input type="checkbox" data-k="noLoop"><span class="sl"></span></span></label>
   <label>Hide publics <span class="sw"><input type="checkbox" data-k="hidePublics"><span class="sl"></span></span></label>
   <label>Show hidden posts (collapsed) <span class="sw"><input type="checkbox" data-k="showHidden"><span class="sl"></span></span></label>
+  <div class="row">
+    <button id="export" title="Download hidden posts, groups and settings as JSON">Export data</button>
+    <button id="import" title="Replace current data with a backup file">Import data</button>
+  </div>
+  <input type="file" id="file" accept=".json,application/json" hidden>
+  <div id="msg"></div>
   <script src="popup.js"></script>
 </body>
 </html>

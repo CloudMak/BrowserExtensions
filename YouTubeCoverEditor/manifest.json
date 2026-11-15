@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Cover Editor",
+  "version": "1.0.0",
+  "description": "Добавляет текст (тайтл) поверх автоматических кадров YouTube Studio и ставит результат обложкой в один клик.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://*.ytimg.com/*",
+    "https://*.googleusercontent.com/*",
+    "https://*.ggpht.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://studio.youtube.com/*"],
+      "js": ["page-hook.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://studio.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["fonts/*.woff2"],
+      "matches": ["https://studio.youtube.com/*"]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+.fvo-btn {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 9999px;
+  border: 1px solid #2dd4bf;
+  background: #ffffff;
+  color: #0f766e;
+  font: 500 13px/1 inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.fvo-btn:hover {
+  background: #f0fdfa;
+}

@@ -1,0 +1,51 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 16px 20px 24px;
+  font: 13px/1.4 "Segoe UI", system-ui, sans-serif;
+  color: #18181b;
+  background: #fafafa;
+}
+header, footer, .row { display: flex; align-items: center; gap: 12px; }
+header { justify-content: space-between; margin-bottom: 12px; }
+h1 { font-size: 17px; margin: 0; }
+footer { justify-content: space-between; margin-top: 14px; }
+label { display: flex; flex-direction: column; gap: 4px; font-weight: 500; }
+label.block { margin-bottom: 12px; }
+.row { align-items: flex-end; margin-bottom: 10px; flex-wrap: wrap; }
+.row label { flex: 1; min-width: 140px; }
+.row label:first-child { flex: 2; }
+textarea, input, select {
+  font: inherit;
+  padding: 6px 8px;
+  border: 1px solid #d4d4d8;
+  border-radius: 8px;
+  background: #fff;
+  width: 100%;
+}
+textarea { resize: vertical; font-family: Consolas, monospace; font-size: 12px; }
+button {
+  font: 500 13px inherit;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  border: none;
+  background: #18181b;
+  color: #fff;
+  cursor: pointer;
+}
+button:disabled { opacity: .45; cursor: default; }
+button.ghost { background: transparent; color: #18181b; border: 1px solid #d4d4d8; padding: 6px 14px; }
+.muted { color: #71717a; font-weight: 400; }
+.warn { background: #fef3c7; border: 1px solid #fcd34d; padding: 8px 10px; border-radius: 8px; margin-bottom: 12px; }
+.warn.error { background: #fee2e2; border-color: #fca5a5; }
+table { width: 100%; border-collapse: collapse; margin-top: 8px; background: #fff; border-radius: 8px; overflow: hidden; }
+th, td { padding: 6px 8px; border-bottom: 1px solid #f4f4f5; text-align: left; vertical-align: top; }
+th { background: #f4f4f5; font-weight: 600; font-size: 12px; }
+td.num, td.tc { white-space: nowrap; font-family: Consolas, monospace; font-size: 12px; }
+td textarea { min-height: 34px; font-family: inherit; font-size: 13px; }
+td.res { width: 190px; font-size: 12px; }
+.ok { color: #047857; }
+.bad { color: #b91c1c; }
+.busy { color: #2563eb; }
+#done { margin-top: 14px; display: flex; flex-direction: column; gap: 6px; }
+#done audio { width: 100%; }

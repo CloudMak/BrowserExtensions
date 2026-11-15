@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Fish Voiceover — Settings</title>
+  <link rel="stylesheet" href="voiceover.css" />
+  <style>
+    body { max-width: 560px; }
+    form { display: flex; flex-direction: column; gap: 12px; }
+    .folder { display: flex; gap: 8px; align-items: center; }
+    .folder span { flex: 1; }
+  </style>
+</head>
+<body>
+  <header><h1>Fish Voiceover — Settings</h1></header>
+  <form id="form">
+    <label>fish.audio API key
+      <input id="apiKey" type="password" autocomplete="off" placeholder="fish.audio → Developer → API Keys" />
+    </label>
+    <label>Default model
+      <select id="model">
+        <option value="s2.1-pro">S2.1 Pro</option>
+        <option value="s2.1-pro-free">S2.1 Pro (free)</option>
+        <option value="s2-pro">S2 Pro</option>
+        <option value="drama-3">Drama 3</option>
+        <option value="s1">S1</option>
+      </select>
+      <span class="muted">The window uses the model selected on the fish.audio page when it can read it.</span>
+    </label>
+    <label>Default voice ID
+      <input id="voiceId" placeholder="Used when the page's voice can't be read" />
+    </label>
+    <label>Base speed
+      <input id="speed" type="number" min="0.5" max="2" step="0.05" />
+    </label>
+    <label>FPS for Speech Editor text (HH:MM:SS:FF)
+      <input id="fps" type="number" min="1" max="120" step="1" />
+    </label>
+    <div>
+      <div style="font-weight:500;margin-bottom:4px">Output folder</div>
+      <div class="folder">
+        <span id="folder" class="muted"></span>
+        <button type="button" id="pick" class="ghost">Choose folder…</button>
+        <button type="button" id="reset" class="ghost">Use Downloads</button>
+      </div>
+    </div>
+    <div><button type="submit">Save</button> <span id="saved" class="ok" hidden>Saved</span></div>
+  </form>
+  <script type="module" src="options.js"></script>
+</body>
+</html>
