@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B5FEE4E030A9E13000DE63ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FEE4DF30A9E13000DE63ED /* AppDelegate.swift */; };
+		B5FEE4E430A9E13000DE63ED /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = B5FEE4E230A9E13000DE63ED /* Main.html */; };
+		B5FEE4E630A9E13000DE63ED /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B5FEE4E530A9E13000DE63ED /* Icon.png */; };
+		B5FEE4E830A9E13000DE63ED /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = B5FEE4E730A9E13000DE63ED /* Style.css */; };
+		B5FEE4EA30A9E13000DE63ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FEE4E930A9E13000DE63ED /* SceneDelegate.swift */; };
+		B5FEE4EC30A9E13000DE63ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FEE4EB30A9E13000DE63ED /* ViewController.swift */; };
+		B5FEE4EF30A9E13000DE63ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5FEE4ED30A9E13000DE63ED /* LaunchScreen.storyboard */; };
+		B5FEE4F230A9E13000DE63ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5FEE4F030A9E13000DE63ED /* Main.storyboard */; };
+		B5FEE4FA30A9E13100DE63ED /* Telegram AI Messages Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B5FEE4F930A9E13100DE63ED /* Telegram AI Messages Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B5FEE4FF30A9E13100DE63ED /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FEE4FE30A9E13100DE63ED /* SafariWebExtensionHandler.swift */; };
+		B5FEE50130A9E13100DE63ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5FEE4F330A9E13100DE63ED /* Assets.xcassets */; };
+		B5FEE51330A9E13200DE63ED /* content.css in Resources */ = {isa = PBXBuildFile; fileRef = B5FEE50C30A9E13200DE63ED /* content.css */; };
+		B5FEE51430A9E13200DE63ED /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = B5FEE50D30A9E13200DE63ED /* background.js */; };
+		B5FEE51530A9E13200DE63ED /* options.js in Resources */ = {isa = PBXBuildFile; fileRef = B5FEE50E30A9E13200DE63ED /* options.js */; };
+		B5FEE51630A9E13200DE63ED /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = B5FEE50F30A9E13200DE63ED /* manifest.json */; };
+		B5FEE51730A9E13200DE63ED /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = B5FEE51030A9E13200DE63ED /* options.html */; };
+		B5FEE51830A9E13200DE63ED /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = B5FEE51130A9E13200DE63ED /* content.js */; };
+		B5FEE51930A9E13200DE63ED /* defaults.js in Resources */ = {isa = PBXBuildFile; fileRef = B5FEE51230A9E13200DE63ED /* defaults.js */; };
+		B5FEE5A130A9E13200DE63ED /* images in Resources */ = {isa = PBXBuildFile; fileRef = B5FEE5A030A9E13200DE63ED /* images */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5FEE4FB30A9E13100DE63ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5FEE4D430A9E13000DE63ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5FEE4F830A9E13100DE63ED;
+			remoteInfo = "Telegram AI Messages Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B5FEE50730A9E13100DE63ED /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B5FEE4FA30A9E13100DE63ED /* Telegram AI Messages Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B5FEE4DC30A9E13000DE63ED /* Telegram AI Messages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Telegram AI Messages.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5FEE4DF30A9E13000DE63ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5FEE4E330A9E13000DE63ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		B5FEE4E530A9E13000DE63ED /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		B5FEE4E730A9E13000DE63ED /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		B5FEE4E930A9E13000DE63ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B5FEE4EB30A9E13000DE63ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5FEE4EE30A9E13000DE63ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B5FEE4F130A9E13000DE63ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B5FEE4F330A9E13100DE63ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5FEE4F430A9E13100DE63ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5FEE4F930A9E13100DE63ED /* Telegram AI Messages Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Telegram AI Messages Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5FEE4FE30A9E13100DE63ED /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		B5FEE50030A9E13100DE63ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5FEE50C30A9E13200DE63ED /* content.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = content.css; path = ../../../TelegramAI/content.css; sourceTree = "<group>"; };
+		B5FEE50D30A9E13200DE63ED /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = ../../../TelegramAI/background.js; sourceTree = "<group>"; };
+		B5FEE50E30A9E13200DE63ED /* options.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = options.js; path = ../../../TelegramAI/options.js; sourceTree = "<group>"; };
+		B5FEE50F30A9E13200DE63ED /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../../TelegramAI/manifest.json; sourceTree = "<group>"; };
+		B5FEE51030A9E13200DE63ED /* options.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = options.html; path = ../../../TelegramAI/options.html; sourceTree = "<group>"; };
+		B5FEE51130A9E13200DE63ED /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = ../../../TelegramAI/content.js; sourceTree = "<group>"; };
+		B5FEE51230A9E13200DE63ED /* defaults.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = defaults.js; path = ../../../TelegramAI/defaults.js; sourceTree = "<group>"; };
+		B5FEE5A030A9E13200DE63ED /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = ../../../TelegramAI/images; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5FEE4D930A9E13000DE63ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5FEE4F630A9E13100DE63ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5FEE4D330A9E13000DE63ED = {
+			isa = PBXGroup;
+			children = (
+				B5FEE4DE30A9E13000DE63ED /* Telegram AI Messages */,
+				B5FEE4FD30A9E13100DE63ED /* Telegram AI Messages Extension */,
+				B5FEE4DD30A9E13000DE63ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5FEE4DD30A9E13000DE63ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5FEE4DC30A9E13000DE63ED /* Telegram AI Messages.app */,
+				B5FEE4F930A9E13100DE63ED /* Telegram AI Messages Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5FEE4DE30A9E13000DE63ED /* Telegram AI Messages */ = {
+			isa = PBXGroup;
+			children = (
+				B5FEE4DF30A9E13000DE63ED /* AppDelegate.swift */,
+				B5FEE4E930A9E13000DE63ED /* SceneDelegate.swift */,
+				B5FEE4EB30A9E13000DE63ED /* ViewController.swift */,
+				B5FEE4ED30A9E13000DE63ED /* LaunchScreen.storyboard */,
+				B5FEE4F030A9E13000DE63ED /* Main.storyboard */,
+				B5FEE4F330A9E13100DE63ED /* Assets.xcassets */,
+				B5FEE4F430A9E13100DE63ED /* Info.plist */,
+				B5FEE4E130A9E13000DE63ED /* Resources */,
+			);
+			path = "Telegram AI Messages";
+			sourceTree = "<group>";
+		};
+		B5FEE4E130A9E13000DE63ED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B5FEE4E230A9E13000DE63ED /* Main.html */,
+				B5FEE4E530A9E13000DE63ED /* Icon.png */,
+				B5FEE4E730A9E13000DE63ED /* Style.css */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B5FEE4FD30A9E13100DE63ED /* Telegram AI Messages Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B5FEE50B30A9E13200DE63ED /* Resources */,
+				B5FEE4FE30A9E13100DE63ED /* SafariWebExtensionHandler.swift */,
+				B5FEE50030A9E13100DE63ED /* Info.plist */,
+			);
+			path = "Telegram AI Messages Extension";
+			sourceTree = "<group>";
+		};
+		B5FEE50B30A9E13200DE63ED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B5FEE50C30A9E13200DE63ED /* content.css */,
+				B5FEE50D30A9E13200DE63ED /* background.js */,
+				B5FEE50E30A9E13200DE63ED /* options.js */,
+				B5FEE50F30A9E13200DE63ED /* manifest.json */,
+				B5FEE51030A9E13200DE63ED /* options.html */,
+				B5FEE51130A9E13200DE63ED /* content.js */,
+				B5FEE51230A9E13200DE63ED /* defaults.js */,
+				B5FEE5A030A9E13200DE63ED /* images */,
+			);
+			name = Resources;
+			path = "Telegram AI Messages Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5FEE4DB30A9E13000DE63ED /* Telegram AI Messages */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5FEE50830A9E13100DE63ED /* Build configuration list for PBXNativeTarget "Telegram AI Messages" */;
+			buildPhases = (
+				B5FEE4D830A9E13000DE63ED /* Sources */,
+				B5FEE4D930A9E13000DE63ED /* Frameworks */,
+				B5FEE4DA30A9E13000DE63ED /* Resources */,
+				B5FEE50730A9E13100DE63ED /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5FEE4FC30A9E13100DE63ED /* PBXTargetDependency */,
+			);
+			name = "Telegram AI Messages";
+			packageProductDependencies = (
+			);
+			productName = "Telegram AI Messages";
+			productReference = B5FEE4DC30A9E13000DE63ED /* Telegram AI Messages.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5FEE4F830A9E13100DE63ED /* Telegram AI Messages Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5FEE50430A9E13100DE63ED /* Build configuration list for PBXNativeTarget "Telegram AI Messages Extension" */;
+			buildPhases = (
+				B5FEE4F530A9E13100DE63ED /* Sources */,
+				B5FEE4F630A9E13100DE63ED /* Frameworks */,
+				B5FEE4F730A9E13100DE63ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Telegram AI Messages Extension";
+			packageProductDependencies = (
+			);
+			productName = "Telegram AI Messages Extension";
+			productReference = B5FEE4F930A9E13100DE63ED /* Telegram AI Messages Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5FEE4D430A9E13000DE63ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					B5FEE4DB30A9E13000DE63ED = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					B5FEE4F830A9E13100DE63ED = {
+						CreatedOnToolsVersion = 26.6;
+					};
+				};
+			};
+			buildConfigurationList = B5FEE4D730A9E13000DE63ED /* Build configuration list for PBXProject "Telegram AI Messages" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5FEE4D330A9E13000DE63ED;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B5FEE4DD30A9E13000DE63ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5FEE4DB30A9E13000DE63ED /* Telegram AI Messages */,
+				B5FEE4F830A9E13100DE63ED /* Telegram AI Messages Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5FEE4DA30A9E13000DE63ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5FEE4E630A9E13000DE63ED /* Icon.png in Resources */,
+				B5FEE4F230A9E13000DE63ED /* Main.storyboard in Resources */,
+				B5FEE4EF30A9E13000DE63ED /* LaunchScreen.storyboard in Resources */,
+				B5FEE4E430A9E13000DE63ED /* Main.html in Resources */,
+				B5FEE50130A9E13100DE63ED /* Assets.xcassets in Resources */,
+				B5FEE4E830A9E13000DE63ED /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5FEE4F730A9E13100DE63ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5FEE51830A9E13200DE63ED /* content.js in Resources */,
+				B5FEE51630A9E13200DE63ED /* manifest.json in Resources */,
+				B5FEE51430A9E13200DE63ED /* background.js in Resources */,
+				B5FEE51730A9E13200DE63ED /* options.html in Resources */,
+				B5FEE51530A9E13200DE63ED /* options.js in Resources */,
+				B5FEE51930A9E13200DE63ED /* defaults.js in Resources */,
+				B5FEE51330A9E13200DE63ED /* content.css in Resources */,
+				B5FEE5A130A9E13200DE63ED /* images in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5FEE4D830A9E13000DE63ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5FEE4EC30A9E13000DE63ED /* ViewController.swift in Sources */,
+				B5FEE4E030A9E13000DE63ED /* AppDelegate.swift in Sources */,
+				B5FEE4EA30A9E13000DE63ED /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5FEE4F530A9E13100DE63ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5FEE4FF30A9E13100DE63ED /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5FEE4FC30A9E13100DE63ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5FEE4F830A9E13100DE63ED /* Telegram AI Messages Extension */;
+			targetProxy = B5FEE4FB30A9E13100DE63ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5FEE4E230A9E13000DE63ED /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5FEE4E330A9E13000DE63ED /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		B5FEE4ED30A9E13000DE63ED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5FEE4EE30A9E13000DE63ED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B5FEE4F030A9E13000DE63ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5FEE4F130A9E13000DE63ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5FEE50230A9E13100DE63ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B5FEE50330A9E13100DE63ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5FEE50530A9E13100DE63ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 856F688YWQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Telegram AI Messages Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Telegram AI Messages Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maksim.TelegramAI.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5FEE50630A9E13100DE63ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 856F688YWQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Telegram AI Messages Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Telegram AI Messages Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maksim.TelegramAI.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B5FEE50930A9E13100DE63ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 856F688YWQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Telegram AI Messages/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Telegram AI Messages";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maksim.TelegramAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5FEE50A30A9E13100DE63ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 856F688YWQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Telegram AI Messages/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Telegram AI Messages";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maksim.TelegramAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5FEE4D730A9E13000DE63ED /* Build configuration list for PBXProject "Telegram AI Messages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5FEE50230A9E13100DE63ED /* Debug */,
+				B5FEE50330A9E13100DE63ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5FEE50430A9E13100DE63ED /* Build configuration list for PBXNativeTarget "Telegram AI Messages Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5FEE50530A9E13100DE63ED /* Debug */,
+				B5FEE50630A9E13100DE63ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5FEE50830A9E13100DE63ED /* Build configuration list for PBXNativeTarget "Telegram AI Messages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5FEE50930A9E13100DE63ED /* Debug */,
+				B5FEE50A30A9E13100DE63ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5FEE4D430A9E13000DE63ED /* Project object */;
+}

@@ -3,17 +3,45 @@
   "name": "Telegram AI Messages",
   "version": "1.1.0",
   "description": "Generate hello / ask / invite messages and improve your draft in Telegram Web with OpenAI.",
-  "permissions": ["storage"],
-  "host_permissions": ["https://api.openai.com/*"],
-  "background": { "service_worker": "background.js" },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api.openai.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
-      "matches": ["https://web.telegram.org/*"],
-      "js": ["content.js"],
-      "css": ["content.css"],
+      "matches": [
+        "https://web.telegram.org/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
       "run_at": "document_idle"
     }
   ],
-  "options_ui": { "page": "options.html", "open_in_tab": true },
-  "action": { "default_title": "Telegram AI Messages — settings" }
+  "options_ui": {
+    "page": "options.html"
+  },
+  "action": {
+    "default_title": "Telegram AI Messages — settings",
+    "default_icon": {
+      "48": "images/icon-48.png",
+      "96": "images/icon-96.png",
+      "128": "images/icon-128.png"
+    }
+  },
+  "icons": {
+    "48": "images/icon-48.png",
+    "96": "images/icon-96.png",
+    "128": "images/icon-128.png",
+    "256": "images/icon-256.png",
+    "512": "images/icon-512.png"
+  }
 }
