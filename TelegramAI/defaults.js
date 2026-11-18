@@ -24,6 +24,30 @@ const TGAI_DEFAULTS = {
   }
 };
 
+// Message tones (shown in the 🎨 tone picker)
+const TGAI_TONES = [
+  ["Twitter Style", "Short, bold and witty, ending with a punchline."],
+  ["Corporate Bullshit", "Maximum corporate jargon and buzzwords, minimum concrete substance."],
+  ["Alpha / Dominant", "Confident and directive, no excuses, no hedging, no apologies."],
+  ["Diplomatic", "Polite and tactful, smooth wording, never a blunt refusal."],
+  ["Passive Aggressive", "Polite on the surface, with a clearly unpleasant undertone."],
+  ["Sarcastic", "Irony, mockery and biting remarks."],
+  ["Intellectual Snob", "Complex sentences and rare words, showing off intellectual superiority."],
+  ["Philosophical", "Deep and abstract, with philosophical generalizations."],
+  ["Flirty", "Playful, with hints and light provocation."],
+  ["Mysterious", "Enigmatic, understated, leaves things unsaid, intriguing."],
+  ["Comedian", "Jokes, unexpected comparisons, absurd humor."],
+  ["Manipulative", "Applies pressure through emotions, guilt or social expectations."],
+  ["Lawyer", "Legally careful, full of caveats, reservations and clarifications."],
+  ["Politician", "Many words, evasive, avoids giving a direct answer."],
+  ["Motivational Guru", "Grandiose and inspiring, with loud bold claims."],
+  ["Gen Z / Brainrot", "Memes, slang and internet culture."],
+  ["Brutally Honest", "Extremely direct, no softening at all."],
+  ["Aristocratic", "Haughty, elegant and restrained."],
+  ["Absurdist", "Ridiculous, surreal and unexpected."],
+  ["Minimalist", "Maximum meaning with minimum words."]
+].map(([name, desc]) => ({ name, desc }));
+
 // Old default prompts that should be replaced by the new defaults if still stored unchanged
 const TGAI_LEGACY_PROMPTS = {
   hello: ["Write a fresh, interesting opening message to say hello. Not generic, not 'Hi, how are you'. Hook the person with something light and specific to the chat if possible."],

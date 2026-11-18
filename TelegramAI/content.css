@@ -1,5 +1,6 @@
 /* Push the message list up so the AI bar never covers messages */
-.MessageList .messages-container { padding-bottom: var(--tgai-pad, 72px) !important; }
+.MessageList .messages-container,
+.chat.active .bubbles-inner { padding-bottom: var(--tgai-pad, 72px) !important; }
 
 .tgai-bar {
   position: fixed; z-index: 9999; display: none; flex-wrap: wrap; align-items: center; gap: 6px;
@@ -13,7 +14,9 @@
 .tgai-chip:hover { filter: brightness(.95); }
 .tgai-chip.tgai-active { background: var(--color-primary, #3390ec); color: #fff; }
 .tgai-icon { padding: 6px 8px; }
-.tgai-style { max-width: 150px; outline: none; appearance: auto; }
+.tgai-style, .tgai-tone { max-width: 150px; outline: none; appearance: auto; }
+.tgai-words { width: 82px; outline: none; padding: 6px 8px; cursor: text; }
+.tgai-words::-webkit-inner-spin-button { opacity: 1; }
 .tgai-extra {
   flex: 1; min-width: 120px; padding: 6px 11px; border-radius: 16px; font-size: 13px; border: none; outline: none;
   background: var(--color-background, #fff); color: var(--color-text, #000); box-shadow: 0 1px 3px rgba(0,0,0,.18);
